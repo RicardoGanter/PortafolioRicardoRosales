@@ -76,12 +76,12 @@ const ContainRedirectText: React.FC = () => {
 
 function getSectionName(section: string): string {
   switch (section) {
-    case 'home': return 'Inicio'
-    case 'aboutMe': return 'Sobre mi'
-    case 'skills': return 'Habilidades'
-    case 'certificates': return 'Certificados'
-    case 'contact': return 'Contacto'
-    default: return section
+  case 'home': return 'Inicio'
+  case 'aboutMe': return 'Sobre mi'
+  case 'skills': return 'Habilidades'
+  case 'certificates': return 'Certificados'
+  case 'contact': return 'Contacto'
+  default: return section
   }
 }
 

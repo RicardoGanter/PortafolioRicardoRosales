@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={monomaniacOne.className}>
-        <ContainRedirectText /> 
-        {children} 
-        <SocialNetworks/> 
+        <ContainRedirectText />
+        {children}
+        <SocialNetworks/>
       </body>
     </html>
   )
