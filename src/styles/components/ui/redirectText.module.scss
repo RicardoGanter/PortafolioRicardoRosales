@@ -1,0 +1,14 @@
+@import "../../variable";
+
+
+.button {
+  color: map-get($textColors, white );
+  cursor: pointer;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: map-get($textColors, green);
+  }&.active {
+    color: green; // Color cuando está activo
+}
+} 

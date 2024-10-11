@@ -1,0 +1,21 @@
+@import "../../variable";
+
+.contain{
+    width: 100%;
+    display: flex;
+    min-height: 100vh; 
+    flex-direction: column;
+    align-items: start;
+    // justify-content: center;
+    margin-top: 25vh;
+    h1{ 
+        font-size: map-get($fontSize, large );
+        color: map-get($textColors, green );
+    }
+    .welcome{
+        margin-top: 15vh; 
+        *{
+            font-size: map-get($fontSize, medium );
+        }
+    }
+}

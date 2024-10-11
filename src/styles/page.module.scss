@@ -1,4 +1,4 @@
-.page {
+/* .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);
   --gray-alpha-100: rgba(var(--gray-rgb), 0.05);
@@ -54,4 +54,13 @@
   padding: 2px 4px;
   border-radius: 4px;
   font-weight: 600;
-} 
+}  */
+
+
+.contain{   
+  width: 70%; 
+  display: flex; 
+  flex-direction: column;
+  height: 100vh;
+}
+

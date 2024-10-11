@@ -1,0 +1,15 @@
+@import '../../variable';
+
+
+.contain{ 
+    min-height: 100vh; 
+    width: 70%;
+    h1{
+        color: map-get($textColors, green );
+        margin-bottom: 10vh;
+    }
+    p{
+        font-size: map-get($fontSize, medium );
+        margin-top: 1rem;
+    }
+}
