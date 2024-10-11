@@ -2,7 +2,7 @@
 "use client"
 
 import React from 'react'
-import styles from '@/styles/components/ui/RedirectText.module.scss'
+import styles from '@/styles/components/ui/redirectText.module.scss'
 
 interface RedirectTextProps {
   name: string;
