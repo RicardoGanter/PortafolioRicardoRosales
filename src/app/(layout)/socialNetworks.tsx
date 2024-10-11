@@ -1,6 +1,6 @@
 import GithubIcon from "@/public/github.svg"
 import LinkedinIcon from "@/public/linkedin.svg"
-import styles from "@/styles/components/socialNetworks.module.scss"
+import styles from "@/styles/(layout)/socialNetworks.module.scss"
 
 const SocialNetworks = ()=>{
   return(

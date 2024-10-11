@@ -2,8 +2,8 @@
 
 import { useState, useEffect, useRef } from 'react'
 import RedirectText from './ui/redirectText'
-import styles from '@/styles/components/containRedirectText.module.scss'
-import getPushGitDate from '@/services/getpushGitdate'
+import styles from '@/styles/(layout)/containRedirectText.module.scss'
+import getPushGitDate from '@/app/(layout)/services/getpushGitdate'
 import scrollToSection from '@/utils/scrollToSection'
 
 const ContainRedirectText: React.FC = () => {

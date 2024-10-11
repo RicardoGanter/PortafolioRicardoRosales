@@ -36,6 +36,19 @@ body {
 h1,h2,h3,h4,h5,h6,p,button{ 
             font-weight: lighter;
 }
+h1,h2,h3{
+  color: map-get($textColors, green );
+}
+h1,h2{
+  font-size: map-get($fontSize, large );
+}
+h3{
+  font-size: map-get($fontSize, medium );
+}
+
+p{
+  font-size: map-get($fontSize, small );
+}
 // .sidebar {
 //   grid-area: sidebar;
 //   position: sticky;

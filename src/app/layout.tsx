@@ -1,8 +1,9 @@
-import type { Metadata } from "next"
-import ContainRedirectText from "@/components/ContainRedirectText"
+
 import "@/styles/globals.scss"
+import type { Metadata } from "next"
+import ContainRedirectText from "./(layout)/ContainRedirectText"
 import { monomaniacOne } from "./fonts"
-import SocialNetworks from "@/components/socialNetworks"
+import SocialNetworks from "./(layout)/socialNetworks"
 
 
 export const metadata: Metadata = {

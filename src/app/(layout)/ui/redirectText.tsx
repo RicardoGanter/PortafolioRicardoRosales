@@ -2,13 +2,13 @@
 "use client"
 
 import React from 'react'
-import styles from '@/styles/components/ui/redirectText.module.scss'
+import styles from '@/styles/(layout)/ui/redirectText.module.scss'
 
 interface RedirectTextProps {
-  name: string;
-  id: string;
-  isActive: boolean; // Prop para determinar si está activo
-  onClick: (id: string) => void; // Prop para manejar el clic
+  name: string
+  id: string
+  isActive: boolean
+  onClick: (id: string) => void
 }
 
 const RedirectText: React.FC<RedirectTextProps> = ({ name, id, isActive, onClick }) => {
