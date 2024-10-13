@@ -3,13 +3,13 @@ import FilterComponent from './components/filter'
 
 
 const Skills = ()=>{
-    return(
-        <div id='skills' className={styles.contain}>
-            <h2>Skills</h2> 
-            <div></div>
-            <FilterComponent/> 
-        </div>
-    )
+  return(
+    <div id='skills' className={styles.contain}>
+      <h2>Skills</h2>
+      <div></div>
+      <FilterComponent/>
+    </div>
+  )
 }
 
 

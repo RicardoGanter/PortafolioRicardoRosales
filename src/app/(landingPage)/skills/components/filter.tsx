@@ -9,9 +9,9 @@ const FilterComponent = ()=>{
     <div className={styles.contain}>
       <p>Filtro</p>
       <Input placeHolder='Buscar'/>
-      <Select title='Nivel de conocimientos' options={knowledge}/> 
-      
-      <Select title='Vista' options={view}/> 
+      <Select title='Nivel de conocimientos' options={knowledge}/>
+
+      <Select title='Vista' options={view}/>
     </div>
   )
 }
