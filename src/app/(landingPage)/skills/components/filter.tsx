@@ -3,14 +3,15 @@ import Input from '@/components/ui/input/input'
 import Select from '@/components/ui/select/select'
 
 const FilterComponent = ()=>{
-  const knowledge = ['Avanzado','Intermedio','Basico']
+  const knowledge : string[] = ['Avanzado','Intermedio','Basico']
+  const view : string[] = ['Todo', 'Por Categorías']
   return(
     <div className={styles.contain}>
       <p>Filtro</p>
-      <Input/>
+      <Input placeHolder='Buscar'/>
       <Select title='Nivel de conocimientos' options={knowledge}/> 
       
-      <Select options={knowledge}/> 
+      <Select title='Vista' options={view}/> 
     </div>
   )
 }

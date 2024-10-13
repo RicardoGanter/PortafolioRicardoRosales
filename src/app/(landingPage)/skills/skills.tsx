@@ -4,10 +4,10 @@ import FilterComponent from './components/filter'
 
 const Skills = ()=>{
     return(
-        <div className={styles.contain}>
+        <div id='skills' className={styles.contain}>
             <h2>Skills</h2> 
             <div></div>
-            <FilterComponent/>
+            <FilterComponent/> 
         </div>
     )
 }

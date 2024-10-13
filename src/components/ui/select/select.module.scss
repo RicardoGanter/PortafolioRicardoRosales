@@ -1,15 +1,76 @@
 @import '../../../styles/variable';
 
+.selectContainer {
+    position: relative;
+    // width: 200px;
+    font-family: Arial, sans-serif;
+}
 
-.contain{
-    background-color: transparent;
-    border: 1px map-get($textColors, white ) solid;
+.select {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $backgroundColor;
+    border: 1px solid map-get($textColors, white);
     border-radius: 6px;
-    padding: .3rem;
-    option{
-        background-color: $backgroundColor;
-        border: 1px map-get($textColors, white ) solid;
-        border-radius: 6px;
-        padding: .3rem;
+    padding: 0.5rem 1rem;
+    color: map-get($textColors, white);
+    min-width: 200px;
+    cursor: pointer;
+    user-select: none;
+    &.open {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: none; // Remove bottom border when open
     }
+}
+
+.arrow {
+    margin-left: 1rem;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.open .arrow {
+    transform: rotate(180deg);
+}
+
+.options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: $backgroundColor;
+    border: 1px solid map-get($textColors, white);
+    border-top: none; // Remove top border
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 0.4rem 0;
+    color: map-get($textColors, white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: .4rem;
+    border: 1px solid rgba(255, 255, 255, 0); 
+    border-radius: 6px; 
+    &.selected {
+        border: 1px solid white; 
+    }
+    &:hover {
+        // background-color: lighten($backgroundColor, 10%);
+        border: 1px solid map-get($textColors, skyBlue ); 
+        color: map-get($textColors, skyBlue );
+    }
+
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 18px;
 }
