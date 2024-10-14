@@ -1,6 +1,6 @@
 import styles from '@/styles/(landingPage)/skills/skills.module.scss'
 import FilterComponent from './components/filter'
-
+import SkillsProgramming from './components/skillsProgramming'
 
 const Skills = ()=>{
   return(
@@ -8,6 +8,7 @@ const Skills = ()=>{
       <h2>Skills</h2>
       <div></div>
       <FilterComponent/>
+      <SkillsProgramming/>
     </div>
   )
 }
