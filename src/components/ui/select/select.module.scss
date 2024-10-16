@@ -4,6 +4,7 @@
     position: relative;
     // width: 200px;
     font-family: Arial, sans-serif;
+    z-index: 1;
 }
 
 .select {
@@ -15,7 +16,7 @@
     border-radius: 6px;
     padding: 0.5rem 1rem;
     color: map-get($textColors, white);
-    min-width: 200px;
+    min-width: 230px;
     cursor: pointer;
     user-select: none;
     &.open {

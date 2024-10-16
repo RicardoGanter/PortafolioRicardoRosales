@@ -6,9 +6,10 @@ import { monomaniacOne } from "../../../app/fonts"
 interface SelectProps {
     options: string[]
     title: string
+    functionOnClick: (value: string) => void;
 }
 
-const Select: React.FC<SelectProps> = ({ options, title }) => {
+const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedOption, setSelectedOption] = useState('')
   const selectRef = useRef<HTMLDivElement>(null)
@@ -45,12 +46,16 @@ const Select: React.FC<SelectProps> = ({ options, title }) => {
       </div>
       {isOpen && (
         <div className={styles.options}>
-          <div className={ styles.option } onClick={()=> clearOptionClick()}> Limpar </div>
+          {/* <div className={ styles.option } onClick={()=> clearOptionClick()}> Limpar </div> */}
           {options.map((option, index) => (
             <div
               key={index}
               className={`${styles.option} ${selectedOption === option ? styles.selected : ''}`}
-              onClick={() => handleOptionClick(option)}
+              onClick={() => {
+                handleOptionClick(option);
+                functionOnClick(option);
+              }
+              } 
             >
               {option === 'Todo' && (
                 <span className={styles.icon}>⊞</span>

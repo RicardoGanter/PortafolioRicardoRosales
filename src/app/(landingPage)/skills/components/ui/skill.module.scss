@@ -11,12 +11,13 @@
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.1); 
     border-radius: 50%;
-    width: 80px;
+    width: 80px; 
     height: 80px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    // transition: .4s;
+    // transition: .4s; 
     svg {
         filter: drop-shadow(0 5px 2px rgba(0, 0, 0, .5));
+       
     }
 }
 // .Image:hover{

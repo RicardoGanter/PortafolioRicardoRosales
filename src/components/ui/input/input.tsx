@@ -4,13 +4,16 @@ import { monomaniacOne } from '@/app/fonts'
 interface InputProps {
     // onChange : ( id:string ) => void
     placeHolder : string
+    functionOnChange: (value: string) => void;
 }
 
-const Input : React.FC<InputProps> = ({ placeHolder='' })=>{
+const Input : React.FC<InputProps> = ({ placeHolder='', functionOnChange })=>{
   return (
     <div className={styles.contain}>
       <SearchIcon className={styles.iconSearch} fill={"white"}/>
-      <input placeholder={placeHolder} className={ `${styles.input }  + '' + ${monomaniacOne.className}`}  />
+      <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => 
+        functionOnChange(e.target.value)
+      } placeholder={placeHolder} className={ `${styles.input }  + '' + ${monomaniacOne.className}`}  />
     </div>
   )
 }
