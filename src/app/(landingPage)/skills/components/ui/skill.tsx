@@ -1,5 +1,5 @@
 'use client'
-import styles from './skill.module.scss' 
+import styles from './skill.module.scss'
 import React, { ReactNode } from 'react'
 
 interface SkillProps {
@@ -9,19 +9,19 @@ interface SkillProps {
 }
 
 
-const Skill : React.FC<SkillProps> =({name, knowledge, image})=>{
+const Skill : React.FC<SkillProps> =({ name, knowledge, image })=>{
 
-	
-	return(
-		<div className={styles.contain}>  
-			<div className={styles.Image}>
-				{image}
-			</div>
-			<p>{name}</p>
-			<p>{knowledge}</p>
 
-		</div>
-	)
+  return(
+    <div className={styles.contain}>
+      <div className={styles.Image}>
+        {image}
+      </div>
+      <p>{name}</p>
+      <p>{knowledge}</p>
+
+    </div>
+  )
 }
 
 export default Skill

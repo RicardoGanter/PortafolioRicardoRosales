@@ -1,13 +1,17 @@
 {
   "name": "portafolio",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "generate-icons": "ts-node src/public/skillIcon/skillImport.ts",
+    
+    "build-script": "tsc src/public/skillIcon/skillImport.ts",
+    "generate-icons": "node --loader ts-node/esm ./src/public/skillIcon/skillImport.ts",
     "build": "npm run generate-icons && next build",
     "start": "next start",
     "lint": "next lint"
+    
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",

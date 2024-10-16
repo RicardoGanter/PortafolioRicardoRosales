@@ -11,7 +11,7 @@ const Input : React.FC<InputProps> = ({ placeHolder='', functionOnChange })=>{
   return (
     <div className={styles.contain}>
       <SearchIcon className={styles.iconSearch} fill={"white"}/>
-      <input onChange={(e: React.ChangeEvent<HTMLInputElement>) => 
+      <input onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
         functionOnChange(e.target.value)
       } placeholder={placeHolder} className={ `${styles.input }  + '' + ${monomaniacOne.className}`}  />
     </div>

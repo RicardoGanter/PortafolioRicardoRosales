@@ -20,10 +20,6 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
     setSelectedOption(option)
     setIsOpen(false)
   }
-  const clearOptionClick = () => {
-    setSelectedOption('')
-    setIsOpen(false)
-  }
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -52,10 +48,10 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
               key={index}
               className={`${styles.option} ${selectedOption === option ? styles.selected : ''}`}
               onClick={() => {
-                handleOptionClick(option);
-                functionOnClick(option);
+                handleOptionClick(option)
+                functionOnClick(option)
               }
-              } 
+              }
             >
               {option === 'Todo' && (
                 <span className={styles.icon}>⊞</span>
