@@ -7,9 +7,9 @@ import SkillsProgramming from './components/skillsProgramming'
 import finalSkillCategories, { SkillCategory } from './components/ui/dataSkill'
 import { updateMultipleSkills } from './components/ui/skillsKnowledge'
 import AnimatedComponent from '../utils/animation'
+import dataSkillKnowLedge from './data/dataSkillKnowledge'
 
-
-interface AppContextType {
+export interface AppContextType {
   styleTitle: boolean
   setStyleTitle: React.Dispatch<React.SetStateAction<boolean>>
   setDataSkill: React.Dispatch<React.SetStateAction<SkillCategory[]>>
@@ -43,34 +43,10 @@ export default function Skills() {
   const [styleTitle, setStyleTitle] = useState(true)
   const [dataSkill, setDataSkill] = useState<SkillCategory[]>(finalSkillCategories)
   const [filter, setFilter] = useState<SkillCategoryfilter[]>([])
-  const intermedio = 'intermedio'
-  const avanzado= 'avanzado'
-  const basico = 'básico'
+ 
 
   useEffect(() => {
-    const updatedSkills = updateMultipleSkills(dataSkill, {
-      'HTML': avanzado,
-      'CSS': intermedio,
-      'JavaScript': avanzado,
-      'React': intermedio,
-      'NextJS' : intermedio,
-      'SCSS' : intermedio,
-      'WebJS' : intermedio,
-      'TailWind': basico,
-      'BootStrap' : basico,
-      'Solidity' : intermedio,
-      'MySQL' : intermedio,
-      'ExpressJS' : intermedio,
-      'Jest' : basico,
-      "HardHat" : intermedio,
-      'PostMan' : intermedio,
-      'GitHub' : intermedio,
-      'Jira': basico,
-      'Trello': intermedio,
-      'Git' : intermedio,
-      'NodeJS':  intermedio,
-
-    })
+    const updatedSkills = updateMultipleSkills(dataSkill, dataSkillKnowLedge )
     setDataSkill(updatedSkills)
     setFilter(updatedSkills)
   }, [])

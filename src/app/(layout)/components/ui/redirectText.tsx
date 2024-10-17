@@ -17,6 +17,7 @@ const RedirectText: React.FC<RedirectTextProps> = ({ name, id, isActive, onClick
       onClick={() => onClick(id)}
     >
       {name}
+      <div className={ isActive ? styles.active : '' }></div>
     </a>
   )
 }

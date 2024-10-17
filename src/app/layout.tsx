@@ -1,9 +1,9 @@
 
 import "@/styles/globals.scss"
 import type { Metadata } from "next"
-import ContainRedirectText from "./(layout)/ContainRedirectText"
+import Layout from "./(layout)/layout"
 import { monomaniacOne } from "./fonts"
-import SocialNetworks from "./(layout)/socialNetworks"
+import SocialNetworks from "./(layout)/components/socialNetworks"
 
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={monomaniacOne.className}>
-        <ContainRedirectText />
+        <Layout />
         {children}
         <SocialNetworks/>
       </body>
