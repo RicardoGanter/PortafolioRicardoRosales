@@ -1,4 +1,3 @@
-// RedirectText.tsx
 "use client"
 
 import React from 'react'
@@ -14,7 +13,7 @@ interface RedirectTextProps {
 const RedirectText: React.FC<RedirectTextProps> = ({ name, id, isActive, onClick }) => {
   return (
     <a
-      className={`${styles.button} ${isActive ? styles.active : ''}`} // Cambiar clase si está activo
+      className={`${styles.button} ${isActive ? styles.active : ''}`}
       onClick={() => onClick(id)}
     >
       {name}

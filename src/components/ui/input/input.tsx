@@ -2,7 +2,6 @@ import styles from './input.module.scss'
 import SearchIcon from '@/public/search.svg'
 import { monomaniacOne } from '@/app/fonts'
 interface InputProps {
-    // onChange : ( id:string ) => void
     placeHolder : string
     functionOnChange: (value: string) => void;
 }

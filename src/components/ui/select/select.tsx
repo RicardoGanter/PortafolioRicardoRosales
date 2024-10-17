@@ -37,7 +37,7 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
   return (
     <div className={`${styles.selectContainer} + '' + ${monomaniacOne.className}`} ref={selectRef}>
       <div className={`${styles.select} ${isOpen ? styles.open : ''}`} onClick={toggleSelect}>
-        {selectedOption || title}
+        {  title}
         <span className={styles.arrow}>▼</span>
       </div>
       {isOpen && (
@@ -53,12 +53,12 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
               }
               }
             >
-              {option === 'Todo' && (
+              {/* {option === 'Todo' && (
                 <span className={styles.icon}>⊞</span>
               )}
               {option === 'Por Categorías' && (
                 <span className={styles.icon}>≡</span>
-              )}
+              )} */}
               {option}
             </div>
           ))}

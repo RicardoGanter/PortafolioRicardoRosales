@@ -6,14 +6,17 @@ import FilterComponent from './components/filter'
 import SkillsProgramming from './components/skillsProgramming'
 import finalSkillCategories, { SkillCategory } from './components/ui/dataSkill'
 import { updateMultipleSkills } from './components/ui/skillsKnowledge'
+import AnimatedComponent from '../utils/animation'
+
+
 interface AppContextType {
   styleTitle: boolean
   setStyleTitle: React.Dispatch<React.SetStateAction<boolean>>
   setDataSkill: React.Dispatch<React.SetStateAction<SkillCategory[]>>
   dataSkill: SkillCategory[]
   dataSkillNoModify : SkillCategory[]
-  filter: SkillCategoryfilter[]; // Agregada aquí
-  setFilter: React.Dispatch<React.SetStateAction<SkillCategoryfilter[]>>; // Agregada aquí
+  filter: SkillCategoryfilter[]
+  setFilter: React.Dispatch<React.SetStateAction<SkillCategoryfilter[]>>
 
 }
 
@@ -77,9 +80,11 @@ export default function Skills() {
   return (
     <AppContext.Provider value={{ filter, setFilter,dataSkillNoModify, setStyleTitle, styleTitle, dataSkill, setDataSkill }}>
       <div id="skills" className={styles.contain}>
-        <h2>Skills</h2>
-        <FilterComponent />
-        <SkillsProgramming />
+        <AnimatedComponent animationType='opacity'>
+          <h2 className={styles.h2}>Skills</h2>
+          <FilterComponent />
+          <SkillsProgramming />
+        </AnimatedComponent>
       </div>
     </AppContext.Provider>
   )

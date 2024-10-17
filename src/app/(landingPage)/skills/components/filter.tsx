@@ -3,6 +3,7 @@ import Input from '@/components/ui/input/input'
 import Select from '@/components/ui/select/select'
 import { useState } from 'react'
 import { useAppContext } from '../skills'
+import combinedFilter from './utils/filter'
 const FilterComponent = ()=>{
   const { dataSkill, setStyleTitle, setFilter } = useAppContext()
   const [searchTerm, setSearchTerm] = useState('')
@@ -17,36 +18,16 @@ const FilterComponent = ()=>{
       return setStyleTitle(true)
     }
   }
-  const combinedFilter = (dataName: string, dataCategory: string) => {
-    const filteredBySearch = dataSkill.map((data) => {
-      const filteredSkills = data.skills.filter((skill) => {
-        return skill.name.toLowerCase().includes(dataName.toLowerCase())
-      })
-      return {
-        category: data.category,
-        skills: filteredSkills,
-      }
-    }).filter((category) => category.skills.length > 0)
-    const finalFilter = filteredBySearch.map((data) => {
-      const filteredSkills = data.skills.filter((skill) => {
-        return dataCategory === 'Todo' || skill.knowledge === dataCategory.toLowerCase()
-      })
-      return {
-        category: data.category,
-        skills: filteredSkills,
-      }
-    }).filter((category) => category.skills.length > 0)
-
-    setFilter(finalFilter)
-  }
   const searchFilter = (term: string) => {
     setSearchTerm(term)
-    combinedFilter(term, knowledgeLevel)
+    const combinedFiltered = combinedFilter(dataSkill,term, knowledgeLevel)
+    setFilter(combinedFiltered)
   }
 
   const knowledgeLevelFilter = (level : string) => {
     setKnowledgeLevel(level)
-    combinedFilter(searchTerm, level)
+    const combinedFiltered =combinedFilter(dataSkill,searchTerm, level)
+    setFilter(combinedFiltered)
   }
   return(
     <div className={styles.contain}>

@@ -4,11 +4,12 @@
 .button {
   color: map-get($textColors, white );
   cursor: pointer;
-  transition: color 0.2s ease;
+  transition: 0.4s ease;
   
   &:hover {
     color: map-get($textColors, green);
   }&.active {
-    color: green; 
-}
+    color:  map-get($textColors, green); 
+    transform: scale(1.6);
+  }
 } 

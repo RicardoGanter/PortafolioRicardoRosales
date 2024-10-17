@@ -4,12 +4,14 @@ import { useState, useEffect, useRef } from 'react'
 import RedirectText from './ui/redirectText'
 import styles from '@/styles/(layout)/containRedirectText.module.scss'
 import getPushGitDate from '@/app/(layout)/services/getpushGitdate'
-import scrollToSection from '@/utils/scrollToSection'
+import scrollToSection from '@/app/(layout)/utils/scrollToSection'
+import getSectionName from './utils/getSectionName'
 
 const ContainRedirectText: React.FC = () => {
   const [commitDate, setCommitDate] = useState<string>('')
   const [activeSection, setActiveSection] = useState<string>('home')
   const observerRef = useRef<IntersectionObserver | null>(null)
+  const isScrollingRef = useRef<boolean>(false)
 
   const sections = ['home', 'aboutMe', 'skills', 'certificates', 'contact']
 
@@ -24,13 +26,15 @@ const ContainRedirectText: React.FC = () => {
 
     observerRef.current = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id)
-          }
-        })
+        if (!isScrollingRef.current) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+              setActiveSection(entry.target.id)
+            }
+          })
+        }
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
+      { threshold: [0.5] }
     )
 
     sections.forEach((section) => {
@@ -48,8 +52,12 @@ const ContainRedirectText: React.FC = () => {
   }, [])
 
   const handleRedirect = (id: string) => {
+    isScrollingRef.current = true
     scrollToSection(id)
     setActiveSection(id)
+    setTimeout(() => {
+      isScrollingRef.current = false
+    }, 1200)
   }
 
   return (
@@ -68,21 +76,10 @@ const ContainRedirectText: React.FC = () => {
 
       <div className={styles.containPublication}>
         <p>Publicado</p>
-        <p>{commitDate}</p>
+        <p>{commitDate || '??/??/????'}</p>
       </div>
     </div>
   )
-}
-
-function getSectionName(section: string): string {
-  switch (section) {
-  case 'home': return 'Inicio'
-  case 'aboutMe': return 'Sobre mi'
-  case 'skills': return 'Habilidades'
-  case 'certificates': return 'Certificados'
-  case 'contact': return 'Contacto'
-  default: return section
-  }
 }
 
 export default ContainRedirectText

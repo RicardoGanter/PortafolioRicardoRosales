@@ -1,24 +1,32 @@
 @import '../../../styles/variable';
 
-.contain{
-    position: relative;
-    .iconSearch{
-        position: absolute;
-        z-index: 1;
-        width: 15px;
-        right: 15px;
-        top: 30%;
+.contain {
+  position: relative;
+
+  .input {
+    background-color: transparent;
+    border: 1px solid $whiteOpaque;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    width: 250px;
+
+    &:focus {
+      outline: none;
+      border-color: map-get($textColors, white); 
     }
-    .input{
-        background-color: transparent;
-        border: 1px map-get($textColors, white ) solid;
-        border-radius: 6px; 
-        padding: 0.5rem 1rem;
-        width: 250px;
-        // font-weight: lighter;
-        &:focus {  
-            outline: none; /* Quita el contorno al hacer foco */
-            border-color: #ccc;
-        }
-    }
+  }
+
+  &:focus-within .iconSearch {
+    fill: map-get($textColors, white);
+  }
+  .iconSearch {
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    right: 15px;
+    top: 30%;
+    fill: $whiteOpaque; 
+  }
+
+  
 }

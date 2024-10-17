@@ -1,8 +1,7 @@
 @import '../../../styles/variable';
 
 .selectContainer {
-    position: relative;
-    // width: 200px;
+    position: relative; 
     font-family: Arial, sans-serif;
     z-index: 1;
 }
@@ -11,8 +10,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $backgroundColor;
-    border: 1px solid map-get($textColors, white);
+    background: $backgroundColorReverse;
+    border: 1px solid $whiteOpaque;
     border-radius: 6px;
     padding: 0.5rem 1rem;
     color: map-get($textColors, white);
@@ -21,8 +20,8 @@
     user-select: none;
     &.open {
         border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom: none; // Remove bottom border when open
+        border-bottom-right-radius: 0; 
+        border-bottom: none;
     }
 }
 
@@ -41,9 +40,9 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: $backgroundColor;
-    border: 1px solid map-get($textColors, white);
-    border-top: none; // Remove top border
+    background: $backgroundColorReverse;
+    border: 1px solid $whiteOpaque;
+    border-top: none;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
     overflow: hidden;
@@ -54,19 +53,20 @@
     align-items: center;
     padding: 0.5rem 1rem;
     margin: 0.4rem 0;
-    color: map-get($textColors, white);
+    color: $whiteOpaque;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.4s ease;
     margin: .4rem;
-    border: 1px solid rgba(255, 255, 255, 0); 
+    border: 1px solid transparent; 
     border-radius: 6px; 
     &.selected {
-        border: 1px solid white; 
+        border: 1px solid  map-get($textColors, white ); 
+        
+        color:  map-get($textColors, white );
     }
-    &:hover {
-        // background-color: lighten($backgroundColor, 10%);
-        border: 1px solid map-get($textColors, skyBlue ); 
-        color: map-get($textColors, skyBlue );
+    &:hover { 
+        border: 1px solid  map-get($textColors, green ); 
+        color: map-get($textColors, green );
     }
 
 }
