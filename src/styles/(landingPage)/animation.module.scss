@@ -1,35 +1,27 @@
-
-
 .rightToLeft {
-    opacity: 0; 
-    transition: .8s;
+  opacity: 0;
+  transition: 0.8s;
 }
 
-.rightToLeft.enter{ 
-    opacity: 1; 
-    transform: translatex(0);
+.rightToLeft.enter {
+  opacity: 1;
+  transform: translatex(0);
 }
-.rightToLeft.exit{ 
-    opacity: 0;
-    transform: translatex(500px);
-} 
-
-
-
-.opacity{
-    opacity: 0;
-    transition: .4s;
-    transform: scale(.8);
- 
-} 
-.opacity.enter{
-    
-    transform: scale(1);
-    opacity: 1;
-     
+.rightToLeft.exit {
+  opacity: 0;
+  transform: translatex(500px);
 }
-.opacity.exit{
-    
-    transform: scale(.8);
-    opacity: 0; 
+
+.opacity {
+  opacity: 0;
+  transition: 0.4s;
+  transform: scale(0.8);
+}
+.opacity.enter {
+  transform: scale(1);
+  opacity: 1;
+}
+.opacity.exit {
+  transform: scale(0.8);
+  opacity: 0;
 }

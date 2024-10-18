@@ -1,34 +1,31 @@
-
-
-.contain{
-    display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    transition: .4s; 
-    .title{
-        margin-top: 5rem;
-    }
-    .containSkillCategory{
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-        margin: 2rem;
-        width: 100%;
-        flex-wrap: wrap;
-    } 
-}
-
-.containAllViewFilter{ 
-    display: flex;
+.contain {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.4s;
+  .title {
     margin-top: 5rem;
+  }
+  .containSkillCategory {
+    display: flex;
+    flex-direction: row;
     gap: 1rem;
+    margin: 2rem;
+    width: 100%;
     flex-wrap: wrap;
-    transition: .4s;
-    .titleNone{
-        display: none;
-     }
-    .containSkillAllViewFilter{
-        display: contents;
-    }
+  }
 }
 
+.containAllViewFilter {
+  display: flex;
+  margin-top: 5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  transition: 0.4s;
+  .titleNone {
+    display: none;
+  }
+  .containSkillAllViewFilter {
+    display: contents;
+  }
+}

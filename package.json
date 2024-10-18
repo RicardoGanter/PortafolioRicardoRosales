@@ -5,13 +5,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    
     "build-script": "tsc src/public/skillIcon/skillImport.ts",
     "generate-icons": "node --loader ts-node/esm ./src/public/skillIcon/skillImport.ts",
     "build": "npm run generate-icons && next build",
+    "format": "prettier --write .",
     "start": "next start",
-    "lint": "next lint"
-    
+    "lint": "next lint",
+    "eslint": "npm run format && npm run lint && next build"
   },
   "dependencies": {
     "@svgr/webpack": "^8.1.0",
@@ -30,6 +30,9 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.15",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   }

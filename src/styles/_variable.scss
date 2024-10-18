@@ -1,20 +1,24 @@
 // variables.scss
-$backgroundColor: linear-gradient(135deg, #0B052F, #450146); 
-$backgroundColorReverse : linear-gradient(135deg,  #450146,#0B052F);
-$subBackgroundColorReverse : linear-gradient(135deg, rgba(74, 22, 75, 0.65), rgba(255, 255, 255, 0.2));
-$dropShadow : 1px 2px 4px rgba(0, 0, 0, 0.4);
-$dropShadowVeryDark : 0 5px 2px rgba(0, 0, 0, .5);
+$backgroundColor: linear-gradient(135deg, #0b052f, #450146);
+$backgroundColorReverse: linear-gradient(135deg, #450146, #0b052f);
+$subBackgroundColorReverse: linear-gradient(
+  135deg,
+  rgba(74, 22, 75, 0.65),
+  rgba(255, 255, 255, 0.2)
+);
+$dropShadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+$dropShadowVeryDark: 0 5px 2px rgba(0, 0, 0, 0.5);
 
 $textColors: (
-  skyBlue: #0794A6,
-  green: #00C955,
+  skyBlue: #0794a6,
+  green: #00c955,
   white: #e0e0e0,
 );
 
-$whiteOpaque :rgba(255, 255, 255, 0.5);
+$whiteOpaque: rgba(255, 255, 255, 0.5);
 
-$fontSize : (
-  small : 16px,
-  medium : 20px,
-  large : 32px
-)
+$fontSize: (
+  small: 16px,
+  medium: 20px,
+  large: 32px,
+);

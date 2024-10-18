@@ -1,6 +1,6 @@
 'use client'
 
-import React, { createContext, useContext, useState,useEffect } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 import styles from '@/styles/(landingPage)/skills/skills.module.scss'
 import FilterComponent from './components/filter'
 import SkillsProgramming from './components/skillsProgramming'
@@ -14,10 +14,9 @@ export interface AppContextType {
   setStyleTitle: React.Dispatch<React.SetStateAction<boolean>>
   setDataSkill: React.Dispatch<React.SetStateAction<SkillCategory[]>>
   dataSkill: SkillCategory[]
-  dataSkillNoModify : SkillCategory[]
+  dataSkillNoModify: SkillCategory[]
   filter: SkillCategoryfilter[]
   setFilter: React.Dispatch<React.SetStateAction<SkillCategoryfilter[]>>
-
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined)
@@ -30,23 +29,23 @@ export const useAppContext = () => {
   return context
 }
 interface Skill {
-  name: string;
-  knowledge?: string;
-  image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  name: string
+  knowledge?: string
+  image: React.ComponentType<React.SVGProps<SVGSVGElement>>
 }
 
 interface SkillCategoryfilter {
-  category: string;
-  skills: Skill[];
+  category: string
+  skills: Skill[]
 }
 export default function Skills() {
   const [styleTitle, setStyleTitle] = useState(true)
-  const [dataSkill, setDataSkill] = useState<SkillCategory[]>(finalSkillCategories)
+  const [dataSkill, setDataSkill] =
+    useState<SkillCategory[]>(finalSkillCategories)
   const [filter, setFilter] = useState<SkillCategoryfilter[]>([])
- 
 
   useEffect(() => {
-    const updatedSkills = updateMultipleSkills(dataSkill, dataSkillKnowLedge )
+    const updatedSkills = updateMultipleSkills(dataSkill, dataSkillKnowLedge)
     setDataSkill(updatedSkills)
     setFilter(updatedSkills)
   }, [])
@@ -54,9 +53,19 @@ export default function Skills() {
   const dataSkillNoModify = dataSkill
 
   return (
-    <AppContext.Provider value={{ filter, setFilter,dataSkillNoModify, setStyleTitle, styleTitle, dataSkill, setDataSkill }}>
+    <AppContext.Provider
+      value={{
+        filter,
+        setFilter,
+        dataSkillNoModify,
+        setStyleTitle,
+        styleTitle,
+        dataSkill,
+        setDataSkill,
+      }}
+    >
       <div id="skills" className={styles.contain}>
-        <AnimatedComponent animationType='opacity'>
+        <AnimatedComponent animationType="opacity">
           <h2 className={styles.h2}>Habilidades</h2>
           <FilterComponent />
           <SkillsProgramming />

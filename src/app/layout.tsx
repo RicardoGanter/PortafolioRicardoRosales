@@ -1,13 +1,11 @@
-
-import "@/styles/globals.scss"
-import type { Metadata } from "next"
-import Layout from "./(layout)/layout"
-import { monomaniacOne } from "./fonts"
-import SocialNetworks from "./(layout)/components/socialNetworks"
-
+import '@/styles/globals.scss'
+import type { Metadata } from 'next'
+import Layout from './(layout)/layout'
+import { monomaniacOne } from './fonts'
+import SocialNetworks from './(layout)/components/socialNetworks'
 
 export const metadata: Metadata = {
-  title: "Portafolio Ricardo Rosales",
+  title: 'Portafolio Ricardo Rosales',
 }
 
 export default function RootLayout({
@@ -20,7 +18,7 @@ export default function RootLayout({
       <body className={monomaniacOne.className}>
         <Layout />
         {children}
-        <SocialNetworks/>
+        <SocialNetworks />
       </body>
     </html>
   )

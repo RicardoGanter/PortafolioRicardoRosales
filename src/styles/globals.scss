@@ -1,4 +1,4 @@
-@import "./variable"; // Importa el archivo de variables
+@import './variable'; // Importa el archivo de variables
 
 :root {
   --background: #{$backgroundColor}; // Usa la variable SCSS con la sintaxis de interpolación
@@ -16,12 +16,12 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
-  font-size: 16px; 
+  font-size: 16px;
 }
 
 body {
   margin: 0;
-  padding: 0; 
+  padding: 0;
   height: 100vh;
   background: $backgroundColor;
   // background: var(--background);
@@ -32,23 +32,32 @@ body {
   justify-items: center;
   // grid-template-areas: "sidebar main";
   // min-height: 100vh;
-  
 }
-h1,h2,h3,h4,h5,h6,p,button{ 
-            font-weight: lighter;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button {
+  font-weight: lighter;
 }
-h1,h2,h3{
-  color: map-get($textColors, green );
+h1,
+h2,
+h3 {
+  color: map-get($textColors, green);
 }
-h1,h2{
-  font-size: map-get($fontSize, large );
+h1,
+h2 {
+  font-size: map-get($fontSize, large);
 }
-h3{
-  font-size: map-get($fontSize, medium );
+h3 {
+  font-size: map-get($fontSize, medium);
 }
 
-p{
-  font-size: map-get($fontSize, small );
+p {
+  font-size: map-get($fontSize, small);
 }
 // .sidebar {
 //   grid-area: sidebar;
@@ -66,7 +75,7 @@ p{
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0; 
+  margin: 0;
   scroll-margin-top: 100px;
 }
 

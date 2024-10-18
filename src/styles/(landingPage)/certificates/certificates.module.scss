@@ -1,11 +1,9 @@
 @use '../globalStructure';
 @import '../../variable';
 
-
-
 .containCertificates {
-    max-height: 80vh;
-    overflow-y: scroll;
-    padding-right: 2rem; 
-    scrollbar-width: thin;  
+  max-height: 80vh;
+  overflow-y: scroll;
+  padding-right: 2rem;
+  scrollbar-width: thin;
 }

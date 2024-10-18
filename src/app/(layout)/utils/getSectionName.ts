@@ -1,14 +1,16 @@
-
-
-
-const  getSectionName = (section: string)=>{
-  switch (section) {
-  case 'home': return 'Inicio'
-  case 'aboutMe': return 'Sobre mi'
-  case 'skills': return 'Habilidades'
-  case 'certificates': return 'Certificados'
-  case 'contact': return 'Contacto'
-  default: return section
+const getSectionName = (section: string) => {
+  if (section === 'home') {
+    return 'Inicio'
+  } else if (section === 'aboutMe') {
+    return 'Sobre mi'
+  } else if (section === 'skills') {
+    return 'Habilidades'
+  } else if (section === 'certificates') {
+    return 'Certificados'
+  } else if (section === 'contact') {
+    return 'Contacto'
+  } else {
+    return section
   }
 }
 

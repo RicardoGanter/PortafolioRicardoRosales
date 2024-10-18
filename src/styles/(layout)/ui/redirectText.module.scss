@@ -1,15 +1,15 @@
-@import "../../variable";
-
+@import '../../variable';
 
 .button {
-  color: map-get($textColors, white );
+  color: map-get($textColors, white);
   cursor: pointer;
   transition: 0.4s ease;
-  
+
   &:hover {
     color: map-get($textColors, green);
-  }&.active {
-    color:  map-get($textColors, green); 
+  }
+  &.active {
+    color: map-get($textColors, green);
     transform: scale(1.6);
   }
   // div.active{
@@ -17,6 +17,6 @@
   //   background-color: map-get($textColors, green);
   //   height: 2px;
   //   border-radius: 4px;
-    
-  // } 
-} 
+
+  // }
+}

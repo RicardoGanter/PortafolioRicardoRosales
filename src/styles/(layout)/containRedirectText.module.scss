@@ -1,15 +1,15 @@
-.contain {  
+.contain {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 100vh;
   margin-left: 1rem;
-  padding: 1rem; 
+  padding: 1rem;
   top: 0;
-  left: 0; 
-  width: 130px; 
-  position: sticky;  
+  left: 0;
+  width: 130px;
+  position: sticky;
   .containPublication {
     display: flex;
     flex-direction: column;
@@ -19,13 +19,12 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    justify-content: center; 
-    align-items: center; 
-    flex-grow: 1; 
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
   }
 
   p {
     margin-bottom: 1rem;
   }
 }
-  

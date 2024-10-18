@@ -1,18 +1,24 @@
-// {
-//   "extends": ["next/core-web-vitals", "next/typescript"],
-//   "rules": {
-//     "semi": ["error", "never"], // No permite el uso de punto y coma.
-//     "indent": ["error", 2], // Aplica tabulación de 2 espacios.
-//     "no-unused-vars": ["warn"], // Evita que queden variables no usadas.
-//     "eqeqeq": ["error", "always"], // Exige uso de === y !==.
-//     "no-console": ["warn"], // Da advertencia sobre el uso de console.log.
-//     "curly": ["error", "all"], // Exige siempre usar llaves {} en bloques de código.
-//     "object-curly-spacing": ["error", "always"], // Espacios dentro de llaves.
-//     "arrow-parens": ["error", "always"], // Siempre usa paréntesis en arrow functions.
-//     "no-trailing-spaces": ["error"], // No permite espacios en blanco al final de líneas.
-//     "prefer-const": ["error"], // Sugiere const cuando sea posible.
-//     "comma-dangle": ["error", "always-multiline"] // Coma al final de listas multilinea.
-//   }
-// }
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "semi": ["error", "never"], // No permite el uso de punto y coma.
+    "indent": ["error", 2], // Aplica tabulación de 2 espacios.
+    "no-unused-vars": ["warn"], // Evita que queden variables no usadas.
+    "eqeqeq": ["error", "always"], // Exige uso de === y !==.
+    "no-console": ["warn"], // Da advertencia sobre el uso de console.log.
+    "curly": ["error", "all"], // Exige siempre usar llaves {} en bloques de código.
+    "object-curly-spacing": ["error", "always"], // Espacios dentro de llaves.
+    "arrow-parens": ["error", "always"], // Siempre usa paréntesis en arrow functions.
+    "no-trailing-spaces": ["error"], // No permite espacios en blanco al final de líneas.
+    "prefer-const": ["error"], // Sugiere const cuando sea posible.
+    "comma-dangle": ["error", "always-multiline"] // Coma al final de listas multilinea.
+  }
+}
+
 
 /* eslint-disable @typescript-eslint/no-require-imports */

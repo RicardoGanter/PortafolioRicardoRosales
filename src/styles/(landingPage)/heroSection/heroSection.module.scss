@@ -1,16 +1,15 @@
-
 @use '../globalStructure';
-@import "../../variable";
+@import '../../variable';
 
-.contain{ 
-    margin-top: 25vh;     
+.contain {
+  margin-top: 25vh;
 }
- 
+
 // @keyframes fadeIn {
 //     from {
 //       opacity: 0; /* Comienza con opacidad 0 */
 //       transform: translateY(-40px); /* Comienza 20px arriba */
-//     } 
+//     }
 //     to {
 //       opacity: 1; /* Finaliza con opacidad 1 */
 //       transform: translateY(0); /* Termina en su posición original */

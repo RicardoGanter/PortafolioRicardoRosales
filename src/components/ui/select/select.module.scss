@@ -1,77 +1,76 @@
 @import '../../../styles/variable';
 
 .selectContainer {
-    position: relative; 
-    font-family: Arial, sans-serif;
-    z-index: 1;
+  position: relative;
+  font-family: Arial, sans-serif;
+  z-index: 1;
 }
 
 .select {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: $backgroundColorReverse;
-    border: 1px solid $whiteOpaque;
-    border-radius: 6px;
-    padding: 0.5rem 1rem;
-    color: map-get($textColors, white);
-    min-width: 230px;
-    cursor: pointer;
-    user-select: none;
-    &.open {
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0; 
-        border-bottom: none;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $backgroundColorReverse;
+  border: 1px solid $whiteOpaque;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  color: map-get($textColors, white);
+  min-width: 230px;
+  cursor: pointer;
+  user-select: none;
+  &.open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
+  }
 }
 
 .arrow {
-    margin-left: 1rem;
-    font-size: 12px;
-    transition: transform 0.3s ease;
+  margin-left: 1rem;
+  font-size: 12px;
+  transition: transform 0.3s ease;
 }
 
 .open .arrow {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .options {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: $backgroundColorReverse;
-    border: 1px solid $whiteOpaque;
-    border-top: none;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: $backgroundColorReverse;
+  border: 1px solid $whiteOpaque;
+  border-top: none;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  overflow: hidden;
 }
 
 .option {
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem;
-    margin: 0.4rem 0;
-    color: $whiteOpaque;
-    cursor: pointer;
-    transition: 0.4s ease;
-    margin: .4rem;
-    border: 1px solid transparent; 
-    border-radius: 6px; 
-    &.selected {
-        border: 1px solid  map-get($textColors, white ); 
-        
-        color:  map-get($textColors, white );
-    }
-    &:hover { 
-        border: 1px solid  map-get($textColors, green ); 
-        color: map-get($textColors, green );
-    }
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.4rem 0;
+  color: $whiteOpaque;
+  cursor: pointer;
+  transition: 0.4s ease;
+  margin: 0.4rem;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  &.selected {
+    border: 1px solid map-get($textColors, white);
 
+    color: map-get($textColors, white);
+  }
+  &:hover {
+    border: 1px solid map-get($textColors, green);
+    color: map-get($textColors, green);
+  }
 }
 
 .icon {
-    margin-right: 10px;
-    font-size: 18px;
+  margin-right: 10px;
+  font-size: 18px;
 }

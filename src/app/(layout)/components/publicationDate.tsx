@@ -1,11 +1,11 @@
 import styles from '@/styles/(layout)/containRedirectText.module.scss'
-import { useState, useEffect } from "react"
+import { useState, useEffect } from 'react'
 import getPushGitDate from '../services/getpushGitdate'
 
-const PublicationDate = ()=>{ 
+const PublicationDate = () => {
   const [commitDate, setCommitDate] = useState<string>('')
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     const fetchCommitDate = async () => {
       const date = await getPushGitDate()
       if (date) {
@@ -13,16 +13,14 @@ const PublicationDate = ()=>{
       }
     }
     fetchCommitDate()
-  },[])
+  }, [])
 
-  
-  return(
+  return (
     <div className={styles.containPublication}>
       <p>Publicado</p>
       <p>{commitDate || '??/??/????'}</p>
     </div>
   )
 }
-
 
 export default PublicationDate

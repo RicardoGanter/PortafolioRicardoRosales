@@ -1,12 +1,12 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react'
 import styles from './select.module.scss'
-import { monomaniacOne } from "../../../app/fonts"
+import { monomaniacOne } from '../../../app/fonts'
 
 interface SelectProps {
-    options: string[]
-    title: string
-    functionOnClick: (value: string) => void;
+  options: string[]
+  title: string
+  functionOnClick: (value: string) => void
 }
 
 const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
@@ -23,7 +23,10 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+      if (
+        selectRef.current &&
+        !selectRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false)
       }
     }
@@ -35,9 +38,15 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
   }, [])
 
   return (
-    <div className={`${styles.selectContainer} + '' + ${monomaniacOne.className}`} ref={selectRef}>
-      <div className={`${styles.select} ${isOpen ? styles.open : ''}`} onClick={toggleSelect}>
-        {  title}
+    <div
+      className={`${styles.selectContainer} + '' + ${monomaniacOne.className}`}
+      ref={selectRef}
+    >
+      <div
+        className={`${styles.select} ${isOpen ? styles.open : ''}`}
+        onClick={toggleSelect}
+      >
+        {title}
         <span className={styles.arrow}>▼</span>
       </div>
       {isOpen && (
@@ -50,8 +59,7 @@ const Select: React.FC<SelectProps> = ({ options, title, functionOnClick }) => {
               onClick={() => {
                 handleOptionClick(option)
                 functionOnClick(option)
-              }
-              }
+              }}
             >
               {/* {option === 'Todo' && (
                 <span className={styles.icon}>⊞</span>

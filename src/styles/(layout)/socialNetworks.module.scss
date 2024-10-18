@@ -1,26 +1,26 @@
 @import '../variable';
 
-.contain{
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    height: 100vh;  
-    top: 0;
-    right: 0;
-    .image{  
-        cursor: pointer;  
-        width: 70px;
+.contain {
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  .image {
+    cursor: pointer;
+    width: 70px;
+  }
+  .image:hover {
+    path {
+      fill: map-get($textColors, green);
     }
-    .image:hover{  
-        path{  
-            fill: map-get($textColors, green );
-          }
+  }
+  .image:active {
+    path {
+      opacity: 70%;
     }
-    .image:active{
-        path{  
-            opacity: 70%;
-          }
-    }
+  }
 }

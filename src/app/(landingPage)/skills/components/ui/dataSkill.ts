@@ -1,22 +1,23 @@
-import ImageSkills from "@/public/skillIcon/svgImports"
+import ImageSkills from '@/public/skillIcon/svgImports'
 
 export interface Skill {
-    name: string;
-    knowledge?: 'básico' | 'intermedio' | 'avanzado';
-    image: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-    type: string;
+  name: string
+  knowledge?: 'básico' | 'intermedio' | 'avanzado'
+  image: React.ComponentType<React.SVGProps<SVGSVGElement>>
+  type: string
 }
 
 export interface SkillCategory {
-    category: string;
-    skills: Skill[];
+  category: string
+  skills: Skill[]
 }
 
 const skillCategories: SkillCategory[] = []
 
 // Mapa de categorías por habilidad
 const categoryMap: Record<string, string> = {
-  Frontend: 'HTML,CSS,SCSS,TailWind,BootStrap,JavaScript,React,NextJS,WebJS,Angular',
+  Frontend:
+    'HTML,CSS,SCSS,TailWind,BootStrap,JavaScript,React,NextJS,WebJS,Angular',
   Backend: 'NodeJS,MySQL,Solidity,ExpressJS',
   Testing: 'Jest,HardHat,PostMan',
   Tools: 'Git,GitHub,Jira,Trello',
@@ -48,7 +49,9 @@ const addSkillsAutomatically = () => {
         image: skillImage as React.ComponentType<React.SVGProps<SVGSVGElement>>,
         type: skillType,
       }
-      const existingCategory = skillCategories.find((cat) => cat.category === skillType)
+      const existingCategory = skillCategories.find(
+        (cat) => cat.category === skillType,
+      )
       if (existingCategory) {
         existingCategory.skills.push(skill)
       } else {

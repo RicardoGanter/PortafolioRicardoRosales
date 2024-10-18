@@ -1,14 +1,16 @@
 'use client'
-import { useState,useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from 'react'
 import styles from '@/styles/(landingPage)/animation.module.scss'
 
-
 interface AnimatedComponentProps {
-    animationType: string;
-    children: React.ReactNode;
-  }
+  animationType: string
+  children: React.ReactNode
+}
 
-const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ animationType, children }) => {
+const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
+  animationType,
+  children,
+}) => {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement | null>(null)
 
@@ -23,7 +25,7 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ animationType, ch
           }
         })
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     )
 
     if (ref.current) {
@@ -38,7 +40,10 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({ animationType, ch
   }, [])
 
   return (
-    <div ref={ref} className={`${styles[animationType]} ${isVisible ? styles.enter : styles.exit}`}>
+    <div
+      ref={ref}
+      className={`${styles[animationType]} ${isVisible ? styles.enter : styles.exit}`}
+    >
       {children}
     </div>
   )

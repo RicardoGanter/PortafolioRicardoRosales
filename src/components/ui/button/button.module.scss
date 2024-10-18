@@ -1,19 +1,19 @@
 @import '../../../styles/variable';
 
-.contain{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    
-    padding: .5rem 1rem;
-    border-radius: 6px;
-    background-color: transparent; 
-    border: 1px solid $whiteOpaque;  
-    .image { 
-        width: 20px;
-        height: 20px; 
-    }
-    &:hover{
-        cursor: pointer;
-    }
+.contain {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: transparent;
+  border: 1px solid $whiteOpaque;
+  .image {
+    width: 20px;
+    height: 20px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
 }

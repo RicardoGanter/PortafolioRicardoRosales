@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import React from 'react'
 import styles from '@/styles/(layout)/ui/redirectText.module.scss'
@@ -10,14 +10,19 @@ interface RedirectTextProps {
   onClick: (id: string) => void
 }
 
-const RedirectText: React.FC<RedirectTextProps> = ({ name, id, isActive, onClick }) => {
+const RedirectText: React.FC<RedirectTextProps> = ({
+  name,
+  id,
+  isActive,
+  onClick,
+}) => {
   return (
     <a
       className={`${styles.button} ${isActive ? styles.active : ''}`}
       onClick={() => onClick(id)}
     >
       {name}
-      <div className={ isActive ? styles.active : '' }></div>
+      <div className={isActive ? styles.active : ''}></div>
     </a>
   )
 }
