@@ -1,6 +1,6 @@
 import styles from "@/styles/(landingPage)/aboutMe/aboutMe.module.scss"
 import AnimatedComponent from "../utils/animation"
-import { dataAboutMe } from "./data/ssgData" 
+import { dataAboutMe } from "./data/dataAboutMe" 
 
 const AboutMe = ()=>{
   return (

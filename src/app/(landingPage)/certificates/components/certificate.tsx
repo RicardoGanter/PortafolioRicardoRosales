@@ -27,10 +27,11 @@ const Certificate : React.FC<certificateProps> = ( {course, organization,image, 
                     <p>Aprovado </p> 
                     <p>{date}</p>
                 </div> 
-                <Link target='_blank' href={url}>
-                
-            <Button/>
+                {url && (
+                <Link href={url} target="_blank" rel="noopener noreferrer">
+                    <Button />
                 </Link>
+                )} 
             </div>
             <div className={styles.line}></div>
         </div>
