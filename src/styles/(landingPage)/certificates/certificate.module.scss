@@ -1,0 +1,31 @@
+
+
+.contain{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;  
+    .containImageAndText{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+    .containVerifiedCertificate{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%; 
+        .containVerified{
+            display: flex;
+            gap: 1rem;
+        }
+    }
+    .line{
+        width: 100%;
+        height: 2px;
+        background-color: white;
+    }
+    
+}

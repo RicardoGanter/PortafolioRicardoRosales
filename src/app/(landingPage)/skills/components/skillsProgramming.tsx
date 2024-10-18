@@ -5,11 +5,10 @@ import { useAppContext } from '../skills'
 
 
 const SkillsProgramming = () => {
-  const { styleTitle, filter } = useAppContext()
-
+  const { styleTitle, filter } = useAppContext() 
   return (
     <div className={styleTitle ? styles.contain : styles.containAllViewFilter}>
-      {filter.map((category, catIndex) => (
+      {filter &&  filter.map((category, catIndex) => (
         <div key={catIndex} style={{ display:"contents" }}>
           <h3 className={styleTitle ? styles.title : styles.titleNone}>
             {category.category}

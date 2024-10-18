@@ -2,13 +2,13 @@ import Input from "@/components/ui/input/input"
 import searchCertificateFilter from "../utils/filter"
 
 
-const filterCertificates = ()=>{
+const FilterCertificates = ()=>{
 
     return(
-        <div>
+        <div style={{margin:'4rem'}}>
             <Input placeHolder="Buscar" functionOnChange={searchCertificateFilter}/>
         </div>
     )
 }
 
-export default filterCertificates
+export default FilterCertificates

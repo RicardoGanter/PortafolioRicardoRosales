@@ -6,7 +6,7 @@ const SocialNetworks = ()=>{
   return(
     <div className={styles.contain}>
       <Link target="_blank" href={'https://github.com/RicardoGanter'}>
-        <GithubIcon width={70} className={styles.image} alt="Icono de redes sociales github."/>
+        <GithubIcon className={styles.image} alt="Icono de redes sociales github."/>
       </Link>
       <Link target="_blank" href={'https://www.linkedin.com/in/ricardo-adolfo-rosales-ganter-03362b242/'}>
         <LinkedinIcon className={styles.image} alt="Icono de redes sociales linkedin."/>

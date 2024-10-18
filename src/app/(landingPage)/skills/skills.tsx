@@ -57,7 +57,7 @@ export default function Skills() {
     <AppContext.Provider value={{ filter, setFilter,dataSkillNoModify, setStyleTitle, styleTitle, dataSkill, setDataSkill }}>
       <div id="skills" className={styles.contain}>
         <AnimatedComponent animationType='opacity'>
-          <h2 className={styles.h2}>Skills</h2>
+          <h2 className={styles.h2}>Habilidades</h2>
           <FilterComponent />
           <SkillsProgramming />
         </AnimatedComponent>
