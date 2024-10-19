@@ -1,10 +1,7 @@
 const getPushGitDate = async () => {
-  // const owner = process.env.DATA_NAME_OWNER_GITHUBB
-  // const repository = process.env.DATA_NAME_REPOSITORY_GITHUB
-  // const branch = process.env.DATA_NAME_BRANCH_GITHUB
-  const owner = 'RicardoGanter'
-  const repository = 'PortafolioRicardoRosales'
-  const branch = 'master'
+  const owner = process.env.DATA_NAME_OWNER_GITHUBB
+  const repository = process.env.DATA_NAME_REPOSITORY_GITHUB
+  const branch = process.env.DATA_NAME_BRANCH_GITHUB 
   const getStoragePushGitDate = sessionStorage.getItem('storagePushGitDate')
   if (getStoragePushGitDate) {
     return getStoragePushGitDate
