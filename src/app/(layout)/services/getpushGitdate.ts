@@ -1,7 +1,7 @@
 const getPushGitDate = async () => {
   const owner = process.env.NEXT_PUBLIC_DATA_NAME_OWNER_GITHUB
   const repository = process.env.NEXT_PUBLIC_DATA_NAME_REPOSITORY_GITHUB
-  const branch = process.env.NEXT_PUBLIC_DATA_NAME_BRANCH_GITHUB 
+  const branch = process.env.NEXT_PUBLIC_DATA_NAME_BRANCH_GITHUB
   const getStoragePushGitDate = sessionStorage.getItem('storagePushGitDate')
   if (getStoragePushGitDate) {
     return getStoragePushGitDate
