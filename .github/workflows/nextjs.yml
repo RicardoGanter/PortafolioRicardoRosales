@@ -56,9 +56,9 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Create .env.local file
         run: |
-          echo "DATA_NAME_OWNER_GITHUB=${{ secrets.DATA_NAME_OWNER_GITHUB }}" >> .env.local
-          echo "DATA_NAME_REPOSITORY_GITHUB=${{ secrets.DATA_NAME_REPOSITORY_GITHUB }}" >> .env.local
-          echo "DATA_NAME_BRANCH_GITHUB=${{ secrets.DATA_NAME_BRANCH_GITHUB }}" >> .env.local
+          echo "NEXT_PUBLIC_DATA_NAME_OWNER_GITHUB=${{ secrets.NEXT_PUBLIC_DATA_NAME_OWNER_GITHUB }}" >> .env.local
+          echo "NEXT_PUBLIC_DATA_NAME_REPOSITORY_GITHUB=${{ secrets.NEXT_PUBLIC_DATA_NAME_REPOSITORY_GITHUB }}" >> .env.local
+          echo "NEXT_PUBLIC_DATA_NAME_BRANCH_GITHUB=${{ secrets.NEXT_PUBLIC_DATA_NAME_BRANCH_GITHUB }}" >> .env.local
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
