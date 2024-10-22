@@ -1,6 +1,4 @@
-'use server'
-
-export const getPushGitDate = async () => {
+const getPushGitDate = async () => {
   const owner = process.env.NEXT_PUBLIC_DATA_NAME_OWNER_GITHUB
   const repository = process.env.NEXT_PUBLIC_DATA_NAME_REPOSITORY_GITHUB
   const branch = process.env.NEXT_PUBLIC_DATA_NAME_BRANCH_GITHUB
@@ -13,3 +11,5 @@ export const getPushGitDate = async () => {
     return lastCommitDate
   }
 }
+
+export default getPushGitDate

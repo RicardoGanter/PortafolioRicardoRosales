@@ -1,6 +1,6 @@
 import styles from '@/styles/(layout)/containRedirectText.module.scss'
 import { useState, useEffect } from 'react'
-import { getPushGitDate } from '../../../server/getpushGitdate'
+import getPushGitDate from '../services/getpushGitdate'
 
 const PublicationDate = () => {
   const [commitDate, setCommitDate] = useState<string>('')
