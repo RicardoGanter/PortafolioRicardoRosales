@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Button from '@/components/ui/button/button'
 import React, { ReactNode } from 'react'
 
+import ExternalLink from '@/public/externalLink.svg'
+
 interface certificateProps {
   course: string
   organization: string
@@ -32,7 +34,7 @@ const Certificate: React.FC<certificateProps> = ({
         </div>
         {url && (
           <Link href={url} target="_blank" rel="noopener noreferrer">
-            <Button />
+            <Button text="Ver Certificado" icon={<ExternalLink />} />
           </Link>
         )}
       </div>

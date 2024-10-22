@@ -1,19 +1,25 @@
 import styles from './input.module.scss'
-import SearchIcon from '@/public/search.svg'
 import { monomaniacOne } from '@/app/fonts'
+import { ReactNode } from 'react'
+
 interface InputProps {
   placeHolder: string
   functionOnChange: (value: string) => void
+  icon?: ReactNode
+  type?: string
 }
 
 const Input: React.FC<InputProps> = ({
   placeHolder = '',
   functionOnChange,
+  icon,
+  type,
 }) => {
   return (
     <div className={styles.contain}>
-      <SearchIcon className={styles.iconSearch} fill={'white'} />
+      {icon && <div className={styles.iconSearch}>{icon}</div>}
       <input
+        type={type || 'text'}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           functionOnChange(e.target.value)
         }

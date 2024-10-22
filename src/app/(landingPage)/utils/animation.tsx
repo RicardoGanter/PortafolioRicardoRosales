@@ -1,9 +1,10 @@
 'use client'
+
 import { useState, useEffect, useRef } from 'react'
 import styles from '@/styles/(landingPage)/animation.module.scss'
 
 interface AnimatedComponentProps {
-  animationType: string
+  animationType: 'rightToLeft' | 'opacity'
   children: React.ReactNode
 }
 
@@ -19,13 +20,13 @@ const AnimatedComponent: React.FC<AnimatedComponentProps> = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true) // Aparece cuando entra en la vista
+            setIsVisible(true)
           } else {
-            setIsVisible(false) // Se mantiene la animación al desaparecer
+            setIsVisible(false)
           }
         })
       },
-      { threshold: 0.5 },
+      { threshold: 0.3, rootMargin: '0px 0px -10% 0px' },
     )
 
     if (ref.current) {

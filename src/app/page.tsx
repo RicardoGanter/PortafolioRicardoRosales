@@ -13,6 +13,9 @@ const Certificates = dynamic(
     suspense: true,
   },
 )
+// const Contact = dynamic(() => import('./(landingPage)/contact/contact'), {
+//   suspense: true,
+// })
 export default function Home() {
   return (
     <div className={styles.contain}>
@@ -24,6 +27,9 @@ export default function Home() {
       <React.Suspense>
         <Certificates />
       </React.Suspense>
+      {/* <React.Suspense>
+        <Contact />
+      </React.Suspense> */}
     </div>
   )
 }

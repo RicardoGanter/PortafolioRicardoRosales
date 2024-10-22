@@ -1,0 +1,11 @@
+@use '../globalStructure';
+
+.contain {
+  // margin-top: 10vh;
+  .form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

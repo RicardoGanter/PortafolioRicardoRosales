@@ -3,6 +3,7 @@ import Input from '@/components/ui/input/input'
 import Select from '@/components/ui/select/select'
 import { useState } from 'react'
 import { useAppContext } from '../skills'
+import SearchIcon from '@/public/search.svg'
 import combinedFilter from './utils/filter'
 const FilterComponent = () => {
   const { dataSkill, setStyleTitle, setFilter } = useAppContext()
@@ -31,7 +32,11 @@ const FilterComponent = () => {
   return (
     <div className={styles.contain}>
       <p>Filtro</p>
-      <Input functionOnChange={searchFilter} placeHolder="Buscar" />
+      <Input
+        functionOnChange={searchFilter}
+        icon={<SearchIcon />}
+        placeHolder="Buscar"
+      />
       <Select
         title="Nivel de conocimientos"
         functionOnClick={knowledgeLevelFilter}

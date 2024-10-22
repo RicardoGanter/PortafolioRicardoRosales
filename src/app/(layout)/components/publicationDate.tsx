@@ -1,15 +1,22 @@
 import styles from '@/styles/(layout)/containRedirectText.module.scss'
 import { useState, useEffect } from 'react'
-import getPushGitDate from '../services/getpushGitdate'
+import getPushGitDate from '../../../server/getpushGitdate'
 
 const PublicationDate = () => {
   const [commitDate, setCommitDate] = useState<string>('')
 
   useEffect(() => {
     const fetchCommitDate = async () => {
+      const getStoragePushGitDate = sessionStorage.getItem('storagePushGitDate')
+      if (getStoragePushGitDate) {
+        return setCommitDate(
+          new Date(getStoragePushGitDate).toLocaleDateString(),
+        )
+      }
       const date = await getPushGitDate()
       if (date) {
-        setCommitDate(new Date(date).toLocaleDateString())
+        sessionStorage.setItem('storagePushGitDate', date)
+        return setCommitDate(new Date(date).toLocaleDateString())
       }
     }
     fetchCommitDate()

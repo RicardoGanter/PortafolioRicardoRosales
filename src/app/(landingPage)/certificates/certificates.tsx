@@ -45,7 +45,7 @@ const Certificates = () => {
       }}
     >
       <div id="certificates" className={styles.contain}>
-        <AnimatedComponent animationType="rightToLeft">
+        <AnimatedComponent animationType="opacity">
           <h2>Certificados</h2>
           <FilterCertificates />
           <div className={styles.containCertificates}>

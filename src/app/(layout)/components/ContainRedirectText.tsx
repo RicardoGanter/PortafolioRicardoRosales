@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from 'react'
 import scrollToSection from '../utils/scrollToSection'
 import RedirectText from './ui/redirectText'
 import getSectionName from '../utils/getSectionName'
-const sections = ['home', 'aboutMe', 'skills', 'certificates', 'contact']
+const sections = ['home', 'aboutMe', 'skills', 'certificates']
 const ContainRedirectText = () => {
   const [activeSection, setActiveSection] = useState<string>('home')
   const observerRef = useRef<IntersectionObserver | null>(null)

@@ -8,7 +8,7 @@
     border: 1px solid $whiteOpaque;
     border-radius: 6px;
     padding: 0.5rem 1rem;
-    width: 250px;
+    min-width: 250px;
 
     &:focus {
       outline: none;
@@ -24,7 +24,8 @@
     z-index: 1;
     width: 15px;
     right: 15px;
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
     fill: $whiteOpaque;
   }
 }

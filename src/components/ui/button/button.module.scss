@@ -4,16 +4,32 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-
   padding: 0.5rem 1rem;
   border-radius: 6px;
   background-color: transparent;
   border: 1px solid $whiteOpaque;
+  width: fit-content;
+  cursor: pointer;
   .image {
-    width: 20px;
-    height: 20px;
+    height: 15px;
+    * {
+      width: 15px;
+      height: 15px;
+    }
   }
   &:hover {
-    cursor: pointer;
+    background-color: map-get($textColors, green);
+    .image {
+      * {
+        fill: black;
+      }
+    }
+    p {
+      color: black;
+    }
+  }
+  &:active {
+    background-color: map-get($textColors, green);
+    opacity: 70%;
   }
 }
