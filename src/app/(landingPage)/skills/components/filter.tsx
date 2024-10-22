@@ -31,7 +31,7 @@ const FilterComponent = () => {
   }
   return (
     <div className={styles.contain}>
-      <p>Filtro</p>
+      {/* <p>Filtro</p> */}
       <Input
         functionOnChange={searchFilter}
         icon={<SearchIcon />}

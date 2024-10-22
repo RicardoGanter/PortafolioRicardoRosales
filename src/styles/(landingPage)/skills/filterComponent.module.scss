@@ -1,6 +1,7 @@
 .contain {
   display: flex;
-  gap: 2rem;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
