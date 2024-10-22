@@ -13,4 +13,3 @@ export const getPushGitDate = async () => {
     return lastCommitDate
   }
 }
- 
