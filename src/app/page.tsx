@@ -21,7 +21,7 @@ export default function Home() {
     <div className={styles.contain}>
       <HeroSection />
       <AboutMe />
-      <React.Suspense fallback={<div>Loading...</div>}>
+      <React.Suspense>
         <Skills />
       </React.Suspense>
       <React.Suspense>

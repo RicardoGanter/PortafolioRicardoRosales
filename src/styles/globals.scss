@@ -1,29 +1,5 @@
 @import './variable'; // Importa el archivo de variables
 
-:root {
-  --background: #{$backgroundColor}; // Usa la variable SCSS con la sintaxis de interpolación
-  // --foreground: #171717; // Puedes seguir definiendo otras variables CSS aquí
-}
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --foreground: #ededed;
-//   }
-// }
-// .sidebar {
-//   grid-area: sidebar;
-//   position: sticky;
-//   top: 0;
-//   height: 100vh;
-//   overflow-y: auto;
-// }
-
-// .main-content {
-//   grid-area: main;
-//   overflow-y: auto;
-// }
-
 html,
 body {
   max-width: 100%;
@@ -99,7 +75,10 @@ a {
 // @media (min-width: 720px) and (max-width: 1079px) {
 
 // }
-
+// @media (max-width: 900px) {
+//   .contain {
+//   }
+// }
 // @media (prefers-color-scheme: dark) {
 //   html {
 //     color-scheme: dark;

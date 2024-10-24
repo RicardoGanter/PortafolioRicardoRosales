@@ -1,3 +1,7 @@
+@import '../variable';
+
+$backgroundColorHeader: rgb(35, 6, 51);
+
 .contain {
   display: flex;
   flex-direction: column;
@@ -26,5 +30,22 @@
 
   p {
     margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .contain {
+    position: fixed;
+    background-color: $backgroundColorHeader;
+    border-bottom: solid 1px map-get($textColors, white);
+    z-index: 1;
+    flex-direction: row;
+    height: 0;
+    padding: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    .containerRedirection {
+      flex-direction: row;
+    }
   }
 }

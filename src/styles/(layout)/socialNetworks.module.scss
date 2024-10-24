@@ -1,7 +1,7 @@
 @import '../variable';
 
 .contain {
-  position: sticky;
+  position: fixed;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,4 +23,7 @@
       opacity: 70%;
     }
   }
+}
+
+@media only screen and (max-width: 970px) {
 }

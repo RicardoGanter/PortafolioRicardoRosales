@@ -3,7 +3,6 @@
 .selectContainer {
   position: relative;
   font-family: Arial, sans-serif;
-  z-index: 1;
 }
 
 .select {
@@ -46,6 +45,7 @@
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .option {
